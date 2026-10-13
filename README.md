@@ -41,7 +41,6 @@ http://127.0.0.1:8080/
 - `branches.html`: دليل الفروع.
 - `branches/minya-1.html` و`branches/minya-2.html`: فرعا المنيا.
 - `branches/assiut.html`: صفحة مؤقتة `noindex` حتى اعتماد البيانات.
-- `articles.html`: مساحة التوعية، وتظل `noindex` حتى وجود مقالات مراجعة.
 - `contact.html`: الهاتف وواتساب والخرائط المتاحة.
 - `privacy-policy.html` و`medical-disclaimer.html`: السياسات.
 - `404.html`: صفحة الرابط غير الموجود.
@@ -93,7 +92,7 @@ node qa.js
 - لا توجد Canonical tags مؤقتة بدل اختراع نطاق.
 - `sitemap.xml` صالح لكنه فارغ مؤقتًا ولا يحتوي نطاقات وهمية.
 - `robots.txt` لا يعلن رابط Sitemap غير مؤكد.
-- صفحتا أسيوط والمقالات تحملان `noindex,follow` ولا يجب إضافتهما إلى Sitemap قبل اكتمالهما.
+- صفحة أسيوط تحمل `noindex,follow` ولا يجب إضافتها إلى Sitemap قبل اكتمالها.
 
 بعد اعتماد الدومين:
 
@@ -101,7 +100,7 @@ node qa.js
 2. أضف `og:url` وروابط Open Graph المطلقة عند الحاجة.
 3. املأ `sitemap.xml` بروابط HTTPS المطلقة للصفحات القابلة للفهرسة فقط.
 4. أضف `Sitemap: https://OFFICIAL-DOMAIN/sitemap.xml` إلى `robots.txt`.
-5. لا تضف `articles.html` أو `branches/assiut.html` حتى اكتمالهما وإزالة `noindex` بقرار واعٍ.
+5. لا تضف `branches/assiut.html` حتى اكتمالها وإزالة `noindex` بقرار واعٍ.
 
 ## بيانات تحتاج إلى اعتماد
 

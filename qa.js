@@ -2,7 +2,7 @@ const fs=require("fs");
 const path=require("path");
 const cp=require("child_process");
 const root=__dirname;
-const required=["index.html","about.html","addiction-treatment.html","psychiatry.html","facilities.html","medical-team.html","doctors.html","nursing-team.html","branches.html","branches/minya-1.html","branches/minya-2.html","branches/assiut.html","articles.html","contact.html","privacy-policy.html","medical-disclaimer.html","404.html"];
+const required=["index.html","about.html","addiction-treatment.html","psychiatry.html","facilities.html","medical-team.html","doctors.html","nursing-team.html","branches.html","branches/minya-1.html","branches/minya-2.html","branches/assiut.html","contact.html","privacy-policy.html","medical-disclaimer.html","404.html"];
 const errors=[];
 const walk=dir=>fs.readdirSync(dir,{withFileTypes:true}).flatMap(entry=>entry.isDirectory()?walk(path.join(dir,entry.name)):path.join(dir,entry.name));
 const htmlFiles=walk(root).filter(file=>file.endsWith(".html")&&!file.includes(`${path.sep}reference${path.sep}`));
