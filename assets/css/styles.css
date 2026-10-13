@@ -69,3 +69,16 @@
  .gallery.gallery-uniform{grid-template-columns:1fr}
  .gallery.gallery-uniform figure,.gallery.gallery-uniform figure:nth-child(1),.gallery.gallery-uniform figure:nth-child(6){aspect-ratio:4/3;grid-column:auto;grid-row:auto}
 }
+
+/* Full-width editorial hero */
+.hero.hero-cover{min-height:clamp(620px,calc(100svh - 78px),860px);padding:0;display:flex;align-items:center;isolation:isolate;background-image:url("../images/hero/bedaya-center-hero.png");background-size:cover;background-position:center;background-repeat:no-repeat}
+.hero.hero-cover::before{content:"";position:absolute;z-index:-1;inset:0;width:auto;height:auto;border:0;border-radius:0;box-shadow:none;background:linear-gradient(90deg,rgba(7,27,39,.18) 0%,rgba(7,27,39,.42) 42%,rgba(7,27,39,.91) 100%)}
+.hero-cover-inner{position:relative;padding-block:clamp(5rem,10vw,8rem)}
+.hero-cover .hero-copy{max-width:690px;margin-inline-start:0;margin-inline-end:auto;text-shadow:0 2px 22px rgba(0,0,0,.2)}
+.hero-cover h1{color:#fff;font-size:clamp(2.65rem,5.8vw,5.4rem);line-height:1.2;max-width:12ch}
+.hero-cover .lede{color:#eef5f5;font-size:clamp(1.08rem,1.8vw,1.32rem);max-width:56ch}
+.hero-cover .eyebrow{color:#d9fffa;background:rgba(10,57,67,.58);border-color:rgba(255,255,255,.28);backdrop-filter:blur(8px)}
+.hero-cover .note{width:fit-content;max-width:620px;color:#e5efef;background:rgba(8,35,48,.65);border-color:#5bd0c2;backdrop-filter:blur(8px);text-shadow:none}
+.hero-cover .btn-light{border:1px solid rgba(255,255,255,.72)}
+@media(max-width:1020px){.hero.hero-cover{min-height:680px;background-position:42% center}.hero.hero-cover::before{background:linear-gradient(90deg,rgba(7,27,39,.42),rgba(7,27,39,.88))}.hero-cover .hero-copy{max-width:650px}}
+@media(max-width:620px){.hero.hero-cover{min-height:calc(100svh - 70px);padding:0;background-position:44% center}.hero.hero-cover::before{background:linear-gradient(180deg,rgba(7,27,39,.52),rgba(7,27,39,.91))}.hero-cover-inner{padding-block:4.5rem 6rem}.hero-cover h1{font-size:clamp(2.3rem,12vw,3.55rem);max-width:11ch}.hero-cover .lede{font-size:1.03rem;line-height:1.8}.hero-cover .actions{display:grid;grid-template-columns:1fr}.hero-cover .btn{width:100%}.hero-cover .note{font-size:.82rem}}
