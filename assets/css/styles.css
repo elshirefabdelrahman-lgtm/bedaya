@@ -82,3 +82,95 @@
 .hero-cover .btn-light{border:1px solid rgba(255,255,255,.72)}
 @media(max-width:1020px){.hero.hero-cover{min-height:680px;background-position:42% center}.hero.hero-cover::before{background:linear-gradient(90deg,rgba(7,27,39,.42),rgba(7,27,39,.88))}.hero-cover .hero-copy{max-width:650px}}
 @media(max-width:620px){.hero.hero-cover{min-height:calc(100svh - 70px);padding:0;background-position:44% center}.hero.hero-cover::before{background:linear-gradient(180deg,rgba(7,27,39,.52),rgba(7,27,39,.91))}.hero-cover-inner{padding-block:4.5rem 6rem}.hero-cover h1{font-size:clamp(2.3rem,12vw,3.55rem);max-width:11ch}.hero-cover .lede{font-size:1.03rem;line-height:1.8}.hero-cover .actions{display:grid;grid-template-columns:1fr}.hero-cover .btn{width:100%}.hero-cover .note{font-size:.82rem}}
+
+/* Unified visual rhythm */
+.grid>.card{height:100%}
+.page-hero-grid>img{height:420px;aspect-ratio:auto;object-fit:cover;object-position:center}
+.gallery{grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:auto;gap:1rem}
+.gallery figure,.gallery figure:nth-child(1),.gallery figure:nth-child(6){grid-column:auto;grid-row:auto;aspect-ratio:4/3;border-radius:18px;box-shadow:var(--shadow)}
+.gallery img{width:100%;height:100%;object-fit:cover}
+.program-card,.branch-card,.team-card{display:flex;flex-direction:column}
+.program-card .card-body,.branch-card .card-body,.team-card .card-body{flex:1;display:flex;flex-direction:column;align-items:flex-start}
+.program-card .card-body .kicker,.branch-card .card-body .actions,.branch-card .card-body>.btn{margin-top:auto}
+.program-card .card-media,.branch-card .card-media{height:230px;aspect-ratio:auto;object-fit:cover;object-position:center}
+.branch-card img[src*="branch-1/facility-07"]{transform:scale(1.3)}
+.branch-card .card-body{min-height:220px;width:100%}
+.branch-card h2,.branch-card h3{margin-bottom:.4rem}
+.branch-card p{min-height:3.7em}
+.section-head h2{max-width:24ch}
+
+/* Service covers and program storytelling */
+.service-cover{position:relative;min-height:clamp(560px,72svh,760px);display:flex;align-items:center;isolation:isolate;background-size:cover;background-position:center}
+.service-cover::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(7,27,39,.22),rgba(7,27,39,.9))}
+.addiction-cover{background-image:url("../images/programs/bedaya-psychological-rehabilitation.jfif")}
+.service-cover-content{padding-block:6rem}
+.service-cover-content h1{max-width:13ch;color:#fff}
+.service-cover-content .lede{color:#edf5f5;max-width:620px}
+.service-cover-content .eyebrow{color:#d9fffa;background:rgba(10,57,67,.58);border-color:rgba(255,255,255,.25)}
+.center-intro{text-align:center}.center-intro .lede{margin-inline:auto}
+.service-programs{display:grid;gap:1.5rem}
+.service-feature{display:grid;grid-template-columns:minmax(0,1.03fr) minmax(0,.97fr);min-height:390px;background:#fff;border:1px solid var(--line);border-radius:28px;overflow:hidden;box-shadow:0 18px 55px rgba(16,45,63,.09)}
+.service-feature.reverse .service-feature-media{order:2}
+.service-feature-media{min-height:100%}
+.service-feature-media img{width:100%;height:100%;min-height:390px;object-fit:cover}
+.service-feature-copy{padding:clamp(1.6rem,4vw,3.25rem);display:flex;flex-direction:column;justify-content:center}
+.service-feature-copy h2{font-size:clamp(1.65rem,3vw,2.45rem)}
+.service-feature-copy p{color:var(--muted)}
+.status{width:fit-content;font-size:.76rem;color:#715b27;background:var(--sand);border-radius:999px;padding:.24rem .65rem;margin-bottom:.7rem;font-weight:700}
+.feature-list{display:grid;gap:.5rem;margin-top:.5rem}
+.feature-list li{position:relative;padding-inline-start:1.35rem;color:var(--ink)}
+.feature-list li::before{content:"✓";position:absolute;inset-inline-start:0;color:var(--teal);font-weight:800}
+.safety-note{margin-top:1rem;padding:.8rem 1rem;background:#fff7e2;border-inline-start:3px solid #d79d28;border-radius:10px;font-size:.88rem}
+.btn-on-dark{color:#fff;border-color:rgba(255,255,255,.7)}
+
+/* Team directories */
+.team-directory-intro{padding-bottom:2.5rem}
+.directory-card{padding:1.5rem;min-height:190px;display:flex;flex-direction:column;gap:.65rem;background:linear-gradient(145deg,#fff,#f4fbf9)}
+.directory-card strong{font-family:var(--display);font-size:1.25rem;color:var(--navy)}
+.directory-card span{color:var(--muted)}
+.directory-card b{margin-top:auto;color:var(--teal)}
+.team-grid-detailed{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}
+.team-grid-detailed .team-profile{display:grid;grid-template-columns:180px 1fr;align-items:stretch}
+.team-grid-detailed .team-profile-image{height:100%;min-height:100%;aspect-ratio:auto;object-fit:cover;object-position:center top}
+.team-grid-detailed .team-profile-body{padding:1.5rem}
+.team-grid-detailed details{display:block}
+.team-directory-hero img{max-height:470px;object-fit:cover;object-position:center top}
+.team-overview .team-groups{gap:5rem}
+.team-overview .team-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}
+.team-overview .team-profile{display:grid;grid-template-columns:170px minmax(0,1fr);text-align:start;min-height:330px}
+.team-overview .team-profile-image{width:170px;height:100%;min-height:330px;object-fit:cover;object-position:center top}
+.team-overview .team-profile-body{padding:1.4rem}
+.team-overview .team-profile details{margin-top:.4rem}
+.team-overview .team-profile summary{cursor:default;list-style:none}
+.team-overview .team-profile summary::-webkit-details-marker{display:none}
+
+@media(max-width:820px){
+ .service-feature,.service-feature.reverse{grid-template-columns:1fr}
+ .service-feature.reverse .service-feature-media{order:0}
+ .service-feature-media img{min-height:0;height:auto;aspect-ratio:16/9}
+ .team-grid-detailed{grid-template-columns:1fr}
+ .team-overview .team-grid{grid-template-columns:1fr}
+ .gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:620px){
+ .program-card .card-media,.branch-card .card-media{height:210px}
+ .branch-card .card-body{min-height:0}
+ .branch-card p{min-height:0}
+ .service-cover{min-height:620px;background-position:center}
+ .service-cover::before{background:linear-gradient(180deg,rgba(7,27,39,.42),rgba(7,27,39,.92))}
+ .service-cover-content{padding-block:5rem}
+ .service-feature{border-radius:20px}
+ .service-feature-copy{padding:1.35rem}
+ .team-grid-detailed .team-profile{grid-template-columns:112px 1fr}
+ .team-grid-detailed .team-profile-image{height:100%;max-height:none}
+ .team-grid-detailed .team-profile-body{padding:1rem}
+ .team-grid-detailed .team-bio{font-size:.83rem}
+ .team-overview .team-profile{grid-template-columns:104px minmax(0,1fr);min-height:0}
+ .team-overview .team-profile-image{width:104px;height:150px;min-height:0;align-self:start}
+ .team-overview .team-profile-body{padding:.95rem}
+ .team-overview .team-profile h3{font-size:1rem}
+ .team-overview .team-role,.team-overview .team-specialty,.team-overview .team-bio,.team-overview .team-details li{font-size:.78rem}
+ .page-hero-grid>img{height:auto;aspect-ratio:4/3}
+ .gallery{grid-template-columns:1fr}
+ .gallery figure,.gallery figure:nth-child(1),.gallery figure:nth-child(6){grid-column:auto;grid-row:auto;aspect-ratio:4/3}
+}

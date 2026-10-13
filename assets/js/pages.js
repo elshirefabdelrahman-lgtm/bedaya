@@ -12,7 +12,7 @@
 
  function teamCard(person){
   const card=document.createElement("article");
-  card.className="card team-profile reveal";
+  card.className="card team-profile";
   const image=document.createElement("img");
   image.className="team-profile-image";
   image.src=p(person.image);
@@ -33,6 +33,7 @@
    const list=document.createElement("ul");list.className="team-details";
    person.details.forEach(text=>{const item=document.createElement("li");item.textContent=text;list.append(item)});
    details.append(summary,list);body.append(details);
+   if(document.body.dataset.teamCategory||document.body.classList.contains("team-overview"))details.open=true;
   }
   card.append(image,body);
   return card;
@@ -40,7 +41,9 @@
 
  if(teamRoot){
   teamRoot.className="team-groups";
+  const requestedCategory=document.body.dataset.teamCategory;
   categories.forEach(([id,label])=>{
+   if(requestedCategory&&requestedCategory!==id)return;
    const people=D.team.filter(person=>person.category===id);
    if(!people.length)return;
    const section=document.createElement("section");section.className="team-group";
@@ -48,7 +51,7 @@
    const title=document.createElement("h2");title.textContent=label;
    const count=document.createElement("span");count.textContent=`${people.length} ${people.length===1?"عضو":"أعضاء"}`;
    heading.append(title,count);
-   const grid=document.createElement("div");grid.className="team-grid";
+   const grid=document.createElement("div");grid.className=`team-grid${requestedCategory?" team-grid-detailed":""}`;
    people.forEach(person=>grid.append(teamCard(person)));
    section.append(heading,grid);teamRoot.append(section);
   });

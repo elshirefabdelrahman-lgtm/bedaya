@@ -6,8 +6,8 @@ window.BEDAYA_DATA={
  },
  branches:[
   {id:"minya-1",name:"مركز بداية 1 — المنيا",city:"المنيا",image:"assets/images/branches/branch-1/facility-07.jpeg",map:"https://maps.app.goo.gl/KB2da3MjhRX3RtJF7?g_st=ic",page:"branches/minya-1.html",note:"رابط الخريطة متاح. العنوان النصي التفصيلي يحتاج اعتماد المركز."},
-  {id:"minya-2",name:"مركز بداية 2 — المنيا",city:"المنيا",image:"assets/images/branches/branch-2/facility-01.jfif",map:"https://maps.app.goo.gl/PggpF9nCY8ZW2Ejy9?g_st=iwb",page:"branches/minya-2.html",note:"رابط الخريطة متاح. العنوان النصي التفصيلي يحتاج اعتماد المركز."},
-  {id:"assiut",name:"مركز بداية — أسيوط",city:"أسيوط",image:"assets/images/branches/branch-3/facility-01.jfif",map:null,page:"branches/assiut.html",note:"العنوان والخريطة وربط صور المجلد الثالث بفرع أسيوط تحتاج إلى تأكيد."}
+  {id:"minya-2",name:"مركز بداية 2 — المنيا",city:"المنيا",image:"assets/images/branches/branch-2/facility-06.jfif",map:"https://maps.app.goo.gl/PggpF9nCY8ZW2Ejy9?g_st=iwb",page:"branches/minya-2.html",note:"رابط الخريطة متاح. العنوان النصي التفصيلي يحتاج اعتماد المركز."},
+  {id:"assiut",name:"مركز بداية — أسيوط",city:"أسيوط",image:"assets/images/branches/branch-3/facility-03.jfif",map:null,page:"branches/assiut.html",note:"العنوان والخريطة وربط صور المجلد الثالث بفرع أسيوط تحتاج إلى تأكيد."}
  ],
  programs:[
   {id:"detox",name:"سحب السموم والدعم الطبي",image:"assets/images/programs/bedaya-detox-medical-support.jfif",description:"مرحلة تُدار وفق تقييم طبي ومتابعة مناسبة للحالة، ولا تُجرى ذاتيًا في المنزل.",page:"addiction-treatment.html#detox",points:["تقييم الحالة بواسطة مختص","متابعة الحالة العامة","تحديد الخطوات التالية حسب الاحتياج"]},
