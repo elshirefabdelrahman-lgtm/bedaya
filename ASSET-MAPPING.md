@@ -2,6 +2,19 @@
 
 نُقلت الأصول المستخدمة إلى أسماء إنجليزية منظمة داخل `assets/images`. حُذفت النسخ الثنائية المكررة من جذر المشروع بعد مطابقة SHA-256، وتظل قابلة للاستعادة من تاريخ Git.
 
+## صور البرامج والإدارة المضافة في أكتوبر 2026
+
+| الاستخدام | المسار المنظم |
+|---|---|
+| برنامج الاستخدام المفرط للألعاب والإنترنت | `assets/images/programs/bedaya-digital-detox-program.png` |
+| برنامج التعافي للمهنيين وأصحاب الأعمال | `assets/images/programs/bedaya-executive-recovery-program.png` |
+| برنامج الدمج المهني والاقتصادي | `assets/images/programs/bedaya-economic-reintegration-program.png` |
+| أ. شريف نشأت — مدير القطاع | `assets/images/leadership/sherif-nashat-sector-director.png` |
+| أ. مينا سمير — المدير التنفيذي | `assets/images/leadership/mina-samir-executive-director.png` |
+| أ. مينا رفعت — الشؤون المالية والتنظيمية | `assets/images/leadership/mina-refaat-financial-director.png` |
+
+> أسماء الأفراد ومسمياتهم وسنوات خبرتهم والشهادات الواردة تحتاج إلى مطابقة المستندات وموافقة النشر قبل الإطلاق الرسمي.
+
 ## الهوية والبرامج
 
 | الأصل | النسخة المستخدمة |

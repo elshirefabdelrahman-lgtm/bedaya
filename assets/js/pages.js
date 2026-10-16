@@ -4,6 +4,7 @@
  const p=window.Bedaya.path;
  const teamRoot=document.getElementById("teamGrid");
  const categories=[
+  ["management","الإدارة التنفيذية والتشغيلية"],
   ["leadership","الإدارة والقيادة"],
   ["medical","الإدارة الفنية والاستشاريون والأطباء"],
   ["psychology","الأخصائيون النفسيون"],
@@ -46,7 +47,7 @@
    if(requestedCategory&&requestedCategory!==id)return;
    const people=D.team.filter(person=>person.category===id);
    if(!people.length)return;
-   const section=document.createElement("section");section.className="team-group";
+   const section=document.createElement("section");section.className="team-group";section.id=`${id}-team`;
    const heading=document.createElement("div");heading.className="team-group-heading";
    const title=document.createElement("h2");title.textContent=label;
    const count=document.createElement("span");count.textContent=`${people.length} ${people.length===1?"عضو":"أعضاء"}`;

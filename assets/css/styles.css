@@ -203,3 +203,45 @@ body[data-page="about"] .page-hero-grid>img{object-position:center top}
  .location-map{aspect-ratio:4/3}
  .home-locations .section-head{align-items:start;flex-direction:column}
 }
+
+/* Rich service, facilities and about content */
+.feature-icon{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:var(--mint);color:var(--teal);font-size:1.35rem;font-weight:800;flex:none}
+.feature-card,.value-card{padding:1.45rem;display:flex;flex-direction:column;align-items:flex-start}
+.feature-card .feature-icon,.value-card .feature-icon{margin-bottom:1rem}
+.feature-card p,.value-card p{color:var(--muted);margin-bottom:0}
+.value-card h2{font-size:1.5rem}
+.about-story{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:clamp(2rem,6vw,5rem);align-items:start}
+.about-highlight{padding:clamp(1.4rem,4vw,2.25rem);border-radius:28px;background:linear-gradient(145deg,var(--navy),#174959);color:#e7f0f2;box-shadow:var(--shadow)}
+.about-highlight>strong{display:block;color:#fff;font-family:var(--display);font-size:1.35rem;margin-bottom:1rem}
+.icon-list{display:grid;gap:.75rem}.icon-list li{display:flex;gap:.8rem;align-items:center;padding:.7rem;border-radius:14px;background:rgba(255,255,255,.07)}.icon-list span{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:#fff;color:var(--teal);font-weight:800;flex:none}
+.goal-grid .service-card{min-height:220px}.goal-grid .feature-icon{margin-bottom:1rem}
+.about-governance{align-items:center}.governance-points{display:grid;gap:.75rem}.governance-points p{margin:0;padding:1rem;border:1px solid rgba(255,255,255,.13);border-radius:16px;background:rgba(255,255,255,.06)}.governance-points strong{color:#fff}
+.payment-panel{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:2rem;padding:clamp(1.6rem,5vw,3rem);background:#fff;border:1px solid var(--line);border-radius:30px;box-shadow:var(--shadow)}.payment-panel .feature-icon{margin-bottom:.75rem}.payment-panel h2{max-width:22ch}.payment-panel p{color:var(--muted);max-width:70ch}
+.protection-card{padding:clamp(1.5rem,4vw,2.5rem);border:1px solid var(--line);border-radius:28px;background:#fff;box-shadow:0 16px 45px rgba(16,45,63,.07)}.protection-card .feature-icon{margin-bottom:1rem}.protection-card>p{color:var(--muted)}
+
+/* Prominent transfer coordination on the homepage */
+.home-priority-services{padding-top:3rem;padding-bottom:2rem}
+.priority-service{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(220px,.35fr);gap:1.4rem;align-items:center;padding:clamp(1.35rem,4vw,2.25rem);border:1px solid rgba(35,137,125,.22);border-radius:30px;background:linear-gradient(135deg,#fff,#eaf7f4);box-shadow:0 18px 52px rgba(16,45,63,.08)}
+.priority-icon{width:74px;height:74px;border-radius:22px;display:grid;place-items:center;background:var(--navy);font-size:2rem}
+.priority-service h2{font-size:clamp(1.65rem,3vw,2.25rem);margin-bottom:.35rem}.priority-service p{color:var(--muted);margin-bottom:.7rem}.priority-points{display:flex;flex-wrap:wrap;gap:.45rem}.priority-points span{padding:.3rem .7rem;border-radius:999px;background:#fff;color:var(--teal);font-size:.82rem;font-weight:700;border:1px solid var(--line)}
+.priority-action{display:grid;gap:.55rem;text-align:center}.priority-action small{color:var(--muted);line-height:1.5}
+
+/* Leadership portraits: uniform crop, including source image with black margins */
+.team-profile-image[src*="leadership/"]{object-position:center top}
+.team-profile-image[src*="mina-refaat"]{transform:scale(2.15);transform-origin:center 29%}
+.team-profile:has(.team-profile-image[src*="mina-refaat"]){overflow:hidden}
+#management-team .team-profile:last-child{grid-column:1/-1;width:calc(50% - .75rem);justify-self:center}
+
+@media(max-width:900px){
+ .about-story{grid-template-columns:1fr}
+ .payment-panel{grid-template-columns:1fr}
+ .priority-service{grid-template-columns:auto 1fr}.priority-action{grid-column:1/-1;justify-items:start;text-align:start}
+}
+@media(max-width:620px){
+ .facility-features,.value-grid,.goal-grid{grid-template-columns:1fr}
+ .feature-card,.value-card{padding:1.2rem}
+ .priority-service{grid-template-columns:1fr;border-radius:22px}.priority-icon{width:58px;height:58px}.priority-action{grid-column:auto;width:100%}.priority-action .btn{width:100%}
+ .payment-panel{padding:1.3rem;border-radius:22px}.payment-panel .btn{width:100%}
+ .protection-card{padding:1.25rem;border-radius:20px}
+ #management-team .team-profile:last-child{grid-column:auto;width:100%}
+}
