@@ -30,6 +30,7 @@
 .team-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.15rem;align-items:stretch}
 .team-profile{display:flex;flex-direction:column;height:100%;text-align:start}
 .team-profile-image{width:100%;height:245px;object-fit:cover;object-position:center top;background:#f2f4f3}
+.team-profile-media{overflow:hidden;background:#f2f4f3;min-width:0}
 .team-profile-body{padding:1.25rem;display:flex;flex-direction:column;flex:1}
 .team-profile h3{font-size:1.18rem;margin-bottom:.25rem}
 .team-role{color:var(--teal);font-weight:700;font-size:.88rem;line-height:1.55;margin-bottom:.35rem}
@@ -131,6 +132,7 @@
 .directory-card b{margin-top:auto;color:var(--teal)}
 .team-grid-detailed{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}
 .team-grid-detailed .team-profile{display:grid;grid-template-columns:180px 1fr;align-items:stretch}
+.team-grid-detailed .team-profile-media{width:180px;height:100%;min-height:100%}
 .team-grid-detailed .team-profile-image{height:100%;min-height:100%;aspect-ratio:auto;object-fit:cover;object-position:center top}
 .team-grid-detailed .team-profile-body{padding:1.5rem}
 .team-grid-detailed details{display:block}
@@ -138,6 +140,7 @@
 .team-overview .team-groups{gap:5rem}
 .team-overview .team-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}
 .team-overview .team-profile{display:grid;grid-template-columns:170px minmax(0,1fr);text-align:start;min-height:330px}
+.team-overview .team-profile-media{width:170px;height:100%;min-height:330px}
 .team-overview .team-profile-image{width:170px;height:100%;min-height:330px;object-fit:cover;object-position:center top}
 .team-overview .team-profile-body{padding:1.4rem}
 .team-overview .team-profile details{margin-top:.4rem}
@@ -162,10 +165,12 @@
  .service-feature{border-radius:20px}
  .service-feature-copy{padding:1.35rem}
  .team-grid-detailed .team-profile{grid-template-columns:112px 1fr}
+ .team-grid-detailed .team-profile-media{width:112px;height:100%;min-height:0}
  .team-grid-detailed .team-profile-image{height:100%;max-height:none}
  .team-grid-detailed .team-profile-body{padding:1rem}
  .team-grid-detailed .team-bio{font-size:.83rem}
  .team-overview .team-profile{grid-template-columns:104px minmax(0,1fr);min-height:0}
+ .team-overview .team-profile-media{width:104px;height:150px;min-height:0;align-self:start}
  .team-overview .team-profile-image{width:104px;height:150px;min-height:0;align-self:start}
  .team-overview .team-profile-body{padding:.95rem}
  .team-overview .team-profile h3{font-size:1rem}

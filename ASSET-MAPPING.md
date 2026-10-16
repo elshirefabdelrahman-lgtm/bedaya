@@ -31,6 +31,7 @@
 
 - `مركز بداية 1/1 (n).jpeg` → `assets/images/branches/branch-1/facility-nn.jpeg`
 - `مركز بداية 2/1 (n).jfif` → `assets/images/branches/branch-2/facility-nn.jfif`
+- بناءً على تأكيد إدارة المركز، نُقلت صورة الحديقة الأصلية `مركز بداية 2 — صورة 1` إلى مجموعة بداية 1 باسم `assets/images/branches/branch-1/facility-garden-01.jpeg`، وأُزيلت من معرض بداية 2.
 - `مركز بداية 3/1 (n).jfif` → `assets/images/branches/branch-3/facility-nn.jfif`
 
 ربط المجلد الثالث بفرع أسيوط **يحتاج تأكيدًا**.
