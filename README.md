@@ -41,8 +41,8 @@ http://127.0.0.1:8080/
 - `branches.html`: دليل الفروع.
 - `branches/minya-1.html` و`branches/minya-2.html`: فرعا المنيا.
 - `branches/assiut.html`: صفحة مؤقتة `noindex` حتى اعتماد البيانات.
-- `contact.html`: الهاتف وواتساب والخرائط المتاحة.
-- `privacy-policy.html` و`medical-disclaimer.html`: السياسات.
+- `contact.html`: الهاتف وواتساب والخرائط وصفحات الفروع على فيسبوك.
+- `privacy-policy.html`: سياسة الخصوصية.
 - `404.html`: صفحة الرابط غير الموجود.
 
 ## البنية المشتركة

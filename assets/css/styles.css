@@ -238,12 +238,24 @@ body[data-page="about"] .page-hero-grid>img{object-position:center top}
 .team-profile:has(.team-profile-image[src*="mina-refaat"]){overflow:hidden}
 #management-team .team-profile:last-child{grid-column:1/-1;width:calc(50% - .75rem);justify-self:center}
 
+/* Contact page links */
+.contact-links-panel{padding:clamp(1.2rem,3vw,2rem);background:#fff;border:1px solid var(--line);border-radius:28px;box-shadow:0 18px 50px rgba(16,45,63,.07)}
+.contact-links-panel h2:not(:first-child){margin-top:2rem}
+.branch-link-list{display:flex;flex-wrap:wrap;gap:.7rem;margin-bottom:1rem}
+.facebook-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem}
+.facebook-links>a{display:flex;align-items:center;gap:.85rem;min-height:92px;padding:1rem;background:#f5f8ff;border:1px solid #dce5f5;border-radius:18px;transition:transform .2s ease,box-shadow .2s ease}
+.facebook-links>a:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(24,119,242,.14)}
+.facebook-links svg{width:42px;height:42px;flex:none;padding:.45rem;color:#fff;background:#1877f2;border-radius:50%}
+.facebook-links span,.facebook-links strong,.facebook-links small{display:block}
+.facebook-links small{color:#60728a}.facebook-links strong{color:var(--navy);line-height:1.5}
+
 @media(max-width:900px){
  .about-story{grid-template-columns:1fr}
  .payment-panel{grid-template-columns:1fr}
  .priority-service{grid-template-columns:auto 1fr}.priority-action{grid-column:1/-1;justify-items:start;text-align:start}
 }
 @media(max-width:620px){
+ .facebook-links{grid-template-columns:1fr}
  .facility-features,.value-grid,.goal-grid{grid-template-columns:1fr}
  .feature-card,.value-card{padding:1.2rem}
  .priority-service{grid-template-columns:1fr;border-radius:22px}.priority-icon{width:58px;height:58px}.priority-action{grid-column:auto;width:100%}.priority-action .btn{width:100%}
