@@ -95,7 +95,8 @@
 .program-card .card-body .kicker,.branch-card .card-body .actions,.branch-card .card-body>.btn{margin-top:auto}
 .program-card .card-media,.branch-card .card-media{height:230px;aspect-ratio:auto;object-fit:cover;object-position:center}
 .branch-card img[src*="branch-1/facility-07"]{transform:scale(1.3)}
-.branch-card .card-body{min-height:220px;width:100%}
+.branch-card .card-body{position:relative;z-index:2;min-height:220px;width:100%;padding-top:1.75rem;background:#fff}
+.branch-card .card-body .kicker{display:block;margin-bottom:.35rem;line-height:1.5}
 .branch-card h2,.branch-card h3{margin-bottom:.4rem}
 .branch-card p{min-height:3.7em}
 .section-head h2{max-width:24ch}

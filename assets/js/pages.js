@@ -73,10 +73,9 @@
   "minya-2":{dir:"branch-2",items:[
    {file:"facility-02.jfif",caption:"غرفة إقامة في مركز بداية 2"},
    {file:"facility-04.jfif",caption:"غرفة إقامة في مركز بداية 2"},
-   {file:"facility-06.jfif",caption:"مرفق داخلي في مركز بداية 2"},
    {file:"facility-08.jfif",caption:"مساحة داخلية في مركز بداية 2"}
   ]},
-  assiut:{dir:"branch-3",items:[1,2,3,4].map(number=>({file:`facility-${String(number).padStart(2,"0")}.jfif`,caption:`مجموعة صور الفرع الثالث — صورة ${number}`}))}
+  assiut:{dir:"branch-3",items:[1,2,4].map(number=>({file:`facility-${String(number).padStart(2,"0")}.jfif`,caption:`مجموعة صور الفرع الثالث — صورة ${number}`}))}
  };
  const gallery=document.getElementById("branchGallery");
  if(gallery&&galleries[branch]){
