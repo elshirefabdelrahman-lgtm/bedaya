@@ -4,6 +4,12 @@
  const depth=document.body.dataset.depth||"";
  const here=document.body.dataset.page||"home";
  const p=value=>depth+value;
+ const robotsMeta=document.querySelector('meta[name="robots"]')?.content||"";
+ if(!/noindex/i.test(robotsMeta)){
+  const productionUrl=new URL(location.pathname.replace(/\/index\.html$/,"/")||"/","https://www.bidayanew.com").href;
+  if(!document.querySelector('link[rel="canonical"]')){const canonical=document.createElement("link");canonical.rel="canonical";canonical.href=productionUrl;document.head.append(canonical)}
+  if(!document.querySelector('meta[property="og:url"]')){const ogUrl=document.createElement("meta");ogUrl.setAttribute("property","og:url");ogUrl.content=productionUrl;document.head.append(ogUrl)}
+ }
  const wa=(href,text)=>href+"?text="+encodeURIComponent(text);
  const phoneIcon=`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.2 3.2 9.6 8 7.8 9.5a14.5 14.5 0 0 0 6.7 6.7l1.5-1.8 4.8 2.4v2.5a1.8 1.8 0 0 1-1.8 1.8A16.1 16.1 0 0 1 2.9 5 1.8 1.8 0 0 1 4.7 3.2h2.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
  const whatsappIcon=`<svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3a12.7 12.7 0 0 0-10.8 19.4L3.5 29l6.8-1.8A12.8 12.8 0 1 0 16 3Zm0 22.9c-2 0-3.9-.6-5.5-1.6l-.4-.2-4 .9 1.1-3.8-.3-.4A10.2 10.2 0 1 1 16 25.9Zm5.6-7.6c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2l-1 1.1c-.2.2-.4.2-.7.1-2-.9-3.5-2-4.8-4.1-.3-.5.3-.5.8-1.7.1-.2 0-.4 0-.6l-1-2.3c-.3-.6-.6-.5-.8-.5h-.7c-.3 0-.7.1-.9.4-.3.4-1.3 1.3-1.3 3.1 0 1.8 1.3 3.6 1.5 3.8.2.3 2.6 4 6.3 5.6 2.4 1 3.3 1.1 4.5.9 1.4-.2 2.7-1.2 3.1-2.3.4-1.1.4-2 .3-2.2-.2-.3-.5-.4-.8-.5Z"/></svg>`;

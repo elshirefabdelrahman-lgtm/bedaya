@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-# أضف رابط Sitemap الكامل هنا بعد اعتماد الدومين النهائي.
+Sitemap: https://www.bidayanew.com/sitemap.xml

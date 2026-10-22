@@ -1,3 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Interim production-safe sitemap. Add absolute production URLs only after the official domain is confirmed. -->
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.bidayanew.com/</loc></url>
+  <url><loc>https://www.bidayanew.com/about.html</loc></url>
+  <url><loc>https://www.bidayanew.com/addiction-treatment.html</loc></url>
+  <url><loc>https://www.bidayanew.com/psychiatry.html</loc></url>
+  <url><loc>https://www.bidayanew.com/facilities.html</loc></url>
+  <url><loc>https://www.bidayanew.com/medical-team.html</loc></url>
+  <url><loc>https://www.bidayanew.com/doctors.html</loc></url>
+  <url><loc>https://www.bidayanew.com/nursing-team.html</loc></url>
+  <url><loc>https://www.bidayanew.com/branches.html</loc></url>
+  <url><loc>https://www.bidayanew.com/branches/minya-1.html</loc></url>
+  <url><loc>https://www.bidayanew.com/branches/minya-2.html</loc></url>
+  <url><loc>https://www.bidayanew.com/contact.html</loc></url>
+  <url><loc>https://www.bidayanew.com/privacy-policy.html</loc></url>
+</urlset>

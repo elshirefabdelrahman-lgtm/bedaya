@@ -29,7 +29,14 @@ for(const file of walk(path.join(root,"assets","js")).filter(file=>file.endsWith
 const allProduction=walk(root).filter(file=>!file.includes(`${path.sep}reference${path.sep}`)&&!file.includes(`${path.sep}.git${path.sep}`)&&!file.endsWith("qa.js")).map(file=>fs.readFileSync(file).toString()).join("\n");
 if(/domain-pending\.invalid|example\.com/i.test(allProduction))errors.push("Production files contain a placeholder domain");
 const sitemap=fs.readFileSync(path.join(root,"sitemap.xml"),"utf8");
-if(/<loc>/i.test(sitemap))errors.push("Interim sitemap must remain empty until the domain is confirmed");
+const sitemapUrls=[...sitemap.matchAll(/<loc>([^<]+)<\/loc>/gi)].map(match=>match[1]);
+if(new Set(sitemapUrls).size!==sitemapUrls.length)errors.push("Sitemap contains duplicate URLs");
+const expectedSitemapUrls=required.filter(rel=>!["404.html","branches/assiut.html"].includes(rel)).map(rel=>rel==="index.html"?"https://www.bidayanew.com/":`https://www.bidayanew.com/${rel}`);
+for(const url of expectedSitemapUrls)if(!sitemapUrls.includes(url))errors.push(`Sitemap missing ${url}`);
+for(const url of sitemapUrls)if(!expectedSitemapUrls.includes(url))errors.push(`Unexpected sitemap URL ${url}`);
+for(const url of sitemapUrls){const pathname=new URL(url).pathname;const rel=pathname==="/"?"index.html":pathname.slice(1);const source=fs.readFileSync(path.join(root,rel),"utf8");if(/name="robots"[^>]+noindex/i.test(source))errors.push(`Sitemap includes noindex page ${url}`)}
+const robots=fs.readFileSync(path.join(root,"robots.txt"),"utf8");
+if(!/^Sitemap: https:\/\/www\.bidayanew\.com\/sitemap\.xml$/mi.test(robots))errors.push("robots.txt is missing the production sitemap declaration");
 for(const number of ["01033536226","01013130772","01024436904"])if(!allProduction.includes(number))errors.push(`Missing contact number ${number}`);
 if(errors.length){console.error(errors.join("\n"));process.exit(1)}
-console.log(`QA passed: ${htmlFiles.length} production HTML pages, local references, JavaScript syntax, contact data, and interim SEO state.`);
+console.log(`QA passed: ${htmlFiles.length} production HTML pages, local references, JavaScript syntax, contact data, sitemap, robots, and production SEO state.`);
